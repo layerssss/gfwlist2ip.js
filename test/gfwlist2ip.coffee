@@ -13,5 +13,5 @@ describe 'gfwlist2ip',->
 
   describe 'resolve',->
     it 'should complete',(done)->
-      gfwlist2ip.resolve done
+      gfwlist2ip.resolve 'www.google.com.hk', done
 
