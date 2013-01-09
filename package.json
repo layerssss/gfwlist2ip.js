@@ -1,0 +1,23 @@
+{
+  "name": "pfwlist2ip",
+  "description": "把伟大的GFWLIST转化成IP列表",
+  "keywords": [
+    "gfw",
+    "coffee-script"
+  ],
+  "author": {
+    "name": "Michael Yin"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.8.1"
+  },
+  "dependencies": {
+    "coffee-script":"latest",
+    "request":"latest"
+  },
+  "devDependencies":{
+    "chai":"latest"
+  },
+  "test":"mocha --compilers coffee:coffee-script"
+}
