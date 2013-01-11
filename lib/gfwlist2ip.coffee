@@ -45,9 +45,10 @@ module.exports =
         matched = true
         break
     if matched
-      dns.lookup domain, 4, (err, address, family)->
+      dns.resolve4 domain, 4, (err, addresses)->
         return callback err if err
-        _self.onResolved address
+        for address in addresses
+          _self.onResolved address
         callback null
     else
       callback null
