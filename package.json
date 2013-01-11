@@ -1,5 +1,5 @@
 {
-  "name": "pfwlist2ip",
+  "name": "gfwlist2ip",
   "description": "把伟大的GFWLIST转化成IP列表",
   "keywords": [
     "gfw",
