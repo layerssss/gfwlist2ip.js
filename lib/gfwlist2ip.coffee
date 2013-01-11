@@ -19,7 +19,8 @@ module.exports =
 
       iteration = (cb)->
         if gfwdomains.length
-          _self.resolve gfwdomains.pop(), iteration
+          _self.resolve gfwdomains.pop(), ()->
+            iteration cb
         else
           cb()
       iteration ()->
