@@ -27,7 +27,6 @@ module.exports =
         callback null
 
   onResolved: (address)->
-    @list.push address
     console.log "#{address} is in gfwlist"
 
   resolve: (domain,callback)->
@@ -48,7 +47,14 @@ module.exports =
       dns.resolve4 domain, (err, addresses)->
         return callback err if err
         for address in addresses
-          _self.onResolved address
+          found = false
+          for item in _self.list
+            if item==address
+              found = true
+              break
+          if !found
+            _self.onResolved address
+            _self.list.push address
         callback null
     else
       callback null
